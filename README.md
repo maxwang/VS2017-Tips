@@ -8,3 +8,12 @@ C:\Users\Username\.nuget\packages\microsoft.entityframeworkcore.tools\1.1.1\tool
 git rm -r --cached .
 git add .
 git commit -m ".gitignore is now working"
+
+3.Run dotnet application with envirment name
+rem Windows
+C:\> set ASPNETCORE_ENVIRONMENT=Development
+C:\> dotnet ...
+
+rem Unix
+$ export ASPNETCORE_ENVIRONMENT=Development
+$ dotnet ...
