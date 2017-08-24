@@ -17,3 +17,7 @@ C:\> dotnet ...
 rem Unix
 $ export ASPNETCORE_ENVIRONMENT=Development
 $ dotnet ...
+
+
+4.Old csproj to new csproj: Visual Studio 2017 upgrade guide
+http://www.natemcmaster.com/blog/2017/03/09/vs2015-to-vs2017-upgrade/
