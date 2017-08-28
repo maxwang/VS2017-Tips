@@ -21,3 +21,6 @@ $ dotnet ...
 
 4.Old csproj to new csproj: Visual Studio 2017 upgrade guide
 http://www.natemcmaster.com/blog/2017/03/09/vs2015-to-vs2017-upgrade/
+
+5.nultiple-target-frameworks-support
+http://blogs.microsoft.co.il/iblogger/2017/04/05/easily-supporting-multiple-target-frameworks-tfms-with-vs2017-and-nuget/
