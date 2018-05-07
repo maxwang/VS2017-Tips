@@ -1,0 +1,24 @@
+var customers = new List<Customer>();
+            using (var ctx = new EfDbContext())
+            {
+                bool acd = ctx.Configuration.AutoDetectChangesEnabled;
+		ctx.Configuration.AutoDetectChangesEnabled = false;
+                try
+                {
+                    for (var i = 0; i <= 100000; i++)
+                    {
+                        var customer = new Customer
+                        {
+                            Email = "2752154844@qq.com",
+                            Name = i.ToString()
+                        };
+                        customers.Add(customer);
+                    }
+                    ctx.Customers.AddRange(customers);
+                    ctx.SaveChanges();
+                }
+                finally
+                {
+                    ctx.Configuration.AutoDetectChangesEnabled = acd;
+                }
+            };
