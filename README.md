@@ -24,3 +24,12 @@ http://www.natemcmaster.com/blog/2017/03/09/vs2015-to-vs2017-upgrade/
 
 5.nultiple-target-frameworks-support
 http://blogs.microsoft.co.il/iblogger/2017/04/05/easily-supporting-multiple-target-frameworks-tfms-with-vs2017-and-nuget/
+
+6.fetch fork repo
+cd into/cloned/fork-repo
+git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
+git fetch upstream
+
+. Updating your fork from original repo to keep up with their changes:
+
+git pull upstream master
