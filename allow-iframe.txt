@@ -1,0 +1,28 @@
+Setting X-Frame-Options At The Code Level
+
+Adding X-FRAME-OPTIONS to your .net core app is very simple. In your Configure method in your startup.cs, you need to add a custom middleware like so :
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+	app.Use(async (context, next) =>
+	{
+		context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+		await next();
+	});
+ 
+	app.UseMvc();
+}
+And that’s all! Now every request that runs through your ASP.net core app will be protected.
+
+
+Setting X-Frame-Options At The Server Level
+You (or your dev ops team) may prefer to configure headers at the server level. In that case below are the various ways to add X-FRAME-OPTIONS to your web server so every request gains the header.
+
+Setting X-FRAME-OPTIONS in IIS
+
+The best way to do this if you are just using IIS to forward requests to Kestrel (Or even if this is actually being hosted in IIS), is to do this in IIS Manager.
+
+Open IIS Manager and on the left hand tree, left click the site you would like to manage.
+Doubleclick the “HTTP Response Headers” icon.
+Right click the header list and select “Add”
+For the “name” write “X-FRAME-OPTIONS” and for the value write in your desired option e.g. “SAME-ORIGIN”.
