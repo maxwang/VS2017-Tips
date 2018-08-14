@@ -1,0 +1,9 @@
+ASP.NET 4.5 throws 502.5 as a virtual application in Azure Web App under a ASP.NET Core 2.0 application
+modify the web.config file under your ASP.NET 4.5 application as follows
+<configuration>
+  <system.webServer>
+    <handlers>
+      <remove name="aspNetCore"/> <!--add this line-->
+    </handlers>
+  </system.webServer>
+</configuration>
