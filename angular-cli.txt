@@ -1,0 +1,1 @@
+ng g class models/todo --type=model
