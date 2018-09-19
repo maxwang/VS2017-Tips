@@ -1,6 +1,9 @@
 npm slow on windows, use below command 
 npm config set registry http://registry.npmjs.org/ --global
 
+You could use powershell if still does not working
+
+
 ng g class models/todo --type=model
 
 ng g service todo --flat false
