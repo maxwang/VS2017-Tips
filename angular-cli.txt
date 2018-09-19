@@ -1,1 +1,5 @@
 ng g class models/todo --type=model
+
+ng g service todo --flat false
+CREATE src/app/todo/todo.service.spec.ts (362 bytes)
+CREATE src/app/todo/todo.service.ts (133 bytes)
