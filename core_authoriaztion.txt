@@ -1,0 +1,2 @@
+Good Article about authoriaztion
+https://www.jerriepelser.com/blog/creating-dynamic-authorization-policies-aspnet-core/
