@@ -13,3 +13,6 @@ CREATE src/app/todo/todo.service.ts (133 bytes)
 
 ng g component shared/layout/footer --prefix app-layout
 create a component at shared/layout/footer with app-layout-footer as selector
+
+create app with routing
+ng new [name] --routing
