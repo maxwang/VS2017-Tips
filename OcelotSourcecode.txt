@@ -1,0 +1,13 @@
+0. Base infomration about write custom middleware
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-3.1
+
+How to test middleware
+https://blog.georgekosmidis.net/2019/08/06/unit-testing-a-custom-middleware-in-asp-net-core-api/
+
+Someuseful source code form Ocelot
+
+1. Ocelot.Requester.Middleware.HttpRequesterMiddleware 
+  source code for HttpRequesterMiddleware (Main Middleware)
+2. Ocelot.Request.Middleware.DownstreamRequest 
+  soruce code to get downstreamrequest from ReqeustMesssage
+Ocelot.Requester.Middleware
