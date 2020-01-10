@@ -7,7 +7,9 @@ https://blog.georgekosmidis.net/2019/08/06/unit-testing-a-custom-middleware-in-a
 Someuseful source code form Ocelot
 
 1. Ocelot.Requester.Middleware.HttpRequesterMiddleware 
-  source code for HttpRequesterMiddleware (Main Middleware)
+  source code for HttpRequesterMiddleware.
+  Get Downstream content here, replace at ResponderMiddleware
+  
 2. Ocelot.Request.Middleware.DownstreamRequest 
   soruce code to get downstreamrequest from ReqeustMesssage
 Ocelot.Requester.Middleware
@@ -18,7 +20,7 @@ Ocelot.Requester.Middleware
 5. Ocelot.Responder.HttpContextResponder
    replace HttpContext content with DownstreamResponse
 6. Ocelot.Responder.Middleware.ResponderMiddleware
-   is the middleware to do resonse update
+   the middleware to do resonse update
 
 7. Ocelot.Middleware.Pipeline.OcelotPipelineExtensions
    is the place to regist all middleware
