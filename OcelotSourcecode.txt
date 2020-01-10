@@ -32,3 +32,6 @@ All dependency injection happened here
 
 10. Ocelot.Request.Mapper.RequestMapper
 url mapping, create downstream . Create new HttpRequestMessage based on origin HttpContext.Request
+
+11. Ocelot.Requester.HttpClientHttpRequester
+real code to get downstream content
