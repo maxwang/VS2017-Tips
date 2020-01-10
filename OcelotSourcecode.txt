@@ -20,5 +20,13 @@ Ocelot.Requester.Middleware
 6. Ocelot.Responder.Middleware.ResponderMiddleware
    is the middleware to do resonse update
 
+7. Ocelot.Middleware.Pipeline.OcelotPipelineExtensions
+   is the place to regist all middleware
+8. Ocelot.Middleware.OcelotMiddlewareExtensions
+   start point, UseOcelot is there....
 
+9. Ocelot.DependencyInjection.OcelotBuilder
+All dependency injection happened here
 
+10. Ocelot.Request.Mapper.RequestMapper
+url mapping, create downstream . Create new HttpRequestMessage based on origin HttpContext.Request
