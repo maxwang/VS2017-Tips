@@ -11,3 +11,14 @@ Someuseful source code form Ocelot
 2. Ocelot.Request.Middleware.DownstreamRequest 
   soruce code to get downstreamrequest from ReqeustMesssage
 Ocelot.Requester.Middleware
+3. Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware
+  source code to get/generate downstreamreqeust
+4. Ocelot.Middleware.Pipeline.OcelotPipelineExtensions
+  registe all middleware
+5. Ocelot.Responder.HttpContextResponder
+   replace HttpContext content with DownstreamResponse
+6. Ocelot.Responder.Middleware.ResponderMiddleware
+   is the middleware to do resonse update
+
+
+
