@@ -1,0 +1,7 @@
+ var audienceHttp = new Mock<IHttpClientFactory>();
+
+            var configuration = new Mock<IConfigurationRoot>();
+
+            configuration.SetupGet(m => m[It.Is<string>(s => s == ApiBaseUrls.MA360AudienceApi)]).Returns(@"http://ma360audience.api.ci.betdev.be/");
+
+            _configuration = configuration.Object as IConfiguration;
