@@ -1,0 +1,9 @@
+aws dynamodb list-tables --endpoint-url http://localhost:4569
+
+aws dynamodb query  --table-name PromoMetadataApi-Development-PromoMetadataStore --index-name GSI_Promo --key-condition-expression "EntityId = :entityid" --expression-attribute-values '{\":entityid\": {\"S\":\"1002\"}}' --endpoint-url http://localhost:4569
+
+aws dynamodb scan --table-name PromoMetadataApi-Development-PromoMetadataStore --endpoint-url http://localhost:4569
+
+aws dynamodb scan --table-name PromoMetadataApi-Development-PromoMetadataStore --filter-expression "Enabled = :e" --expression-attribute-values '{\":e\":{\"BOOL\": true }}' --endpoint-url http://localhost:4569
+
+aws dynamodb put-item --table-name PromoMetadataApi-Development-PromoMetadataStore --item file://promotion_201.json --return-consumed-capacity TOTAL --endpoint-url http://localhost:4569
