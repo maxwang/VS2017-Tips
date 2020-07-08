@@ -3,3 +3,4 @@ Unknown AVD name, use -list-avds to see valid list
 
 You need add below envirment variable:
 export ANDROID_HOME=/root/Android/Sdk/ export PATH=${PATH}:/root/Android/Sdk/tools/ export ANDROID_AVD_HOME=/root/.android/avd/
+test
