@@ -1,0 +1,7 @@
+这个是微软Windows 10 的兼容性检测助手，
+
+1.按下“Win+R”，输入 services.msc打开服务。
+
+2.进入到服务列表找到Connected User Experiences and Telemetry ，Program Compatibility Assistant Service服务项 
+
+3.打开服务，将服务进行禁用。
