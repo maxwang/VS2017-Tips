@@ -1,0 +1,20 @@
+
+//写法1：手动绑定
+var leaningOptions = new LearningOptions();
+Configuration.GetSection("Learning").Bind(leaningOptions);
+
+//写法2：自动绑定
+leaningOptions = Configuration.GetSection("Learning").Get<LearningOptions>();
+
+//写法3：自动绑定 + 依赖注入
+services.Configure<LearningOptions>(Configuration.GetSection("Learning"));
+
+//写法4：配置的二次加工
+services.PostConfigure<LearningOptions>(options => options.Years += 1);
+
+//写法5：委托绑定
+services.Configure<AppInfoOptions>(options =>
+{
+  options.AppName = "ASP.NET Core";
+  options.AppVersion = "1.2.1";
+});
