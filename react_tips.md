@@ -8,3 +8,15 @@ render() {
       < button onClick={() => this.handleClick()} /> 
   }
 ```
+
+2. setState is asynomouse, you could use call back 
+
+Because of its asynchronous nature, setState accepts a second argument that is a function that it invokes after the state has been updated.
+
+```js
+handleFirstNameChange = (event) => {
+  this.setState({firstName: event.currentTarget.value}, () => {
+    console.log(this.state.firstName);
+  });
+}
+```
