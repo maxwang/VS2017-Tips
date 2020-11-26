@@ -34,3 +34,21 @@ const handleChange = value => {
   setCount(value)
 };
 ```
+
+3. Correct way set state based on pre value
+
+```js
+handleChange = count => {
+  this.setState({ count: this.state.count + 1 }); // Relying on current value of the state to update it
+};
+```
+
+in some cases the value of count may not be properly updated at the moment when the new state is being set, which will result in the new state value to be set incorrectly. This happens because the state updates are batched in React, so in case there are multiple calls modifying the same variable, such updates can produce unexpected results. A safer way here is to use the funcitonal form of setState
+
+```js
+increment = () => {
+  this.setState(state => ({ count: state.count + 1 })); // The latest state value is used
+};
+```
+
+
