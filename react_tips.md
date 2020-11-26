@@ -20,3 +20,17 @@ handleFirstNameChange = (event) => {
   });
 }
 ```
+
+Official recommended way is to use `useEffect` hook:
+
+```js
+const [count, setCount] = useState(0)
+
+useEffect(() => {
+  callback(count); // Will be called when the value of count changes
+}, [count, callback]);
+
+const handleChange = value => {
+  setCount(value)
+};
+```
