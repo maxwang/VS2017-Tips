@@ -1,3 +1,7 @@
+aws configure list
+
+aws configure list --profile xxxx
+
 aws dynamodb list-tables --endpoint-url http://localhost:4569
 
 aws dynamodb query  --table-name PromoMetadataApi-Development-PromoMetadataStore --index-name GSI_Promo --key-condition-expression "EntityId = :entityid" --expression-attribute-values '{\":entityid\": {\"S\":\"1002\"}}' --endpoint-url http://localhost:4569
