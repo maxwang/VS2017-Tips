@@ -1,0 +1,15 @@
+ public interface IValidation
+{
+
+}
+
+public interface IValidation<in T> : IValidation where T: class
+{
+    List<ProcessingResult> Validate(T entity);
+}
+
+then you could add IValidation list as below
+var validators = new List<IValidation>
+{
+    new DealTransactionSheetDealNameValidation(this.DbCtx)
+};
