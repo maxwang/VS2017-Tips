@@ -1,0 +1,22 @@
+If you got below exception when you install SQLFormatter package for SSMS:
+
+CreateInstance failed for package [FormatterPackage]Source: "mscorlib" Description: Could not load file or assembly "Microsoft.VisualStudio.Shell.12.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" or one of its dependencies. The system cannot find the file specified.
+System.IO.FileNotFoundException: Could not load file or assembly "Microsoft.VisualStudio.Shell.12.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" or one of its dependencies. The system cannot find the file specified.
+File name: "Microsoft.VisualStudio.Shell.12.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.Activator.CreateInstanceFromInternal(String assemblyFile, String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, Evidence securityInfo)
+   at System.AppDomain.CreateInstanceFrom(String assemblyFile, String typeName)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+Edit ssms.exe.config (by default at C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE) and 
+add the following line inside the assemblyBinding element the package will load:
+
+<dependentAssembly> 
+<assemblyIdentity name="Microsoft.VisualStudio.Shell.12.0" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/> 
+<bindingRedirect oldVersion="2.0.0.0-15.0.0.0" newVersion="15.0.0.0"/> 
+</dependentAssembly>
