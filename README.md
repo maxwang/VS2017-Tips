@@ -33,3 +33,14 @@ git fetch upstream
 . Updating your fork from original repo to keep up with their changes:
 
 git pull upstream master
+
+7. Serilog disable EF logging
+"Serilog": {
+  "MinimumLevel": {
+    "Default": "Debug",
+    "Override": {
+      "Microsoft": "Information",
+      "Microsoft.EntityFrameworkCore": "Error",
+      "Microsoft.EntityFrameworkCore.Database.Command": "Error"
+    }
+  },
